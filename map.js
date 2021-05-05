@@ -1,4 +1,3 @@
-import axios from "./node_modules/axios";
 let mymap = L.map("mapid").setView([5.5, 5.5], 13);
 
 const URL =
