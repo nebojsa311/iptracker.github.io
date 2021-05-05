@@ -97,6 +97,12 @@ body {
 }
 
 /*For 4k*/
+@media only screen and (min-width: 1500px){
+  #ipadress{
+    font-size: 22px;
+  }
+}
+
 @media only screen and (min-width: 2559px) {
   #gridContainer {
     width: 60vw;
