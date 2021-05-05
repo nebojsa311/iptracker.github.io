@@ -92,6 +92,10 @@ body {
   background-color: black;
 }
 
+#submitButton:hover {
+  opacity: 0.7;
+}
+
 /*For 4k*/
 @media only screen and (min-width: 2559px) {
   #gridContainer {
