@@ -133,9 +133,14 @@ body {
     grid-template-columns: auto;
     grid-template-rows: 25% 25% 25% 25%;
     height: 40vh;
-    top: 20vh;
+    top: 15vh;
     width: 90vw;
     left: 5vw;
+  }
+
+  .subgrid {
+    grid-template-rows: 40% 60%;
+    align-items: center;
   }
 
   #borderL {
@@ -148,13 +153,18 @@ body {
 
   .upper {
       position: static;
-      width: 100%;
-      text-align: center;
+      width: fit-content;
+      height: fit-content;
+      justify-self: center;
+      align-self: center;
   }
 
   .lower {
       position: static;
-      width: 100%;
+      width: fit-content;
+      height: fit-content;
+      justify-self: center;
+      align-self: center;
       text-align: center;
   }
 }
