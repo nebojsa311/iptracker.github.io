@@ -133,7 +133,7 @@ body {
     grid-template-columns: auto;
     grid-template-rows: 25% 25% 25% 25%;
     height: 40vh;
-    top: 15vh;
+    top: 10vh;
     width: 90vw;
     left: 5vw;
   }
