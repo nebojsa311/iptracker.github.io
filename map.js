@@ -12,14 +12,14 @@ function completeURL() {
 
 function getLocationData() {
   axios.get(fullURL ? fullURL : URL).then((data) => {
+
     document.getElementById("yourIp").innerHTML = data.data.ip;
     document.getElementById("city").innerHTML = data.data.location.city + ",";
     document.getElementById("region").innerHTML = data.data.location.region;
     document.getElementById("timeZone").innerHTML = data.data.location.timezone;
-    document.getElementById("postalCode").innerHTML =
-      data.data.location.postalCode;
+    document.getElementById("postalCode").innerHTML = data.data.location.postalCode;
     document.getElementById("isp").innerHTML = data.data.isp;
-
+    console.log(data);
     mymap.off();
     mymap.remove();
 
@@ -30,7 +30,6 @@ function getLocationData() {
     marker = L.marker([data.data.location.lat, data.data.location.lng]).addTo(
       mymap
     );
-console.log(data);
     L.tileLayer(
       "https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}",
       {
