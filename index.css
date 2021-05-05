@@ -1,9 +1,160 @@
 * {
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
+  font-size: 18px;
+  font-family: "Rubik", sans-serif;
+}
+
+body {
+  background-image: url(images/pattern-bg.png);
+  background-size: 100vw 40vh;
 }
 
 #mapid {
-    height: 250px;
-    width: 50vw;
+  height: 60vh;
+  width: 100vw;
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+}
+
+#gridContainer {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  justify-items: center;
+  width: 80vw;
+  height: 20vh;
+  position: absolute;
+  top: 30vh;
+  left: 10vw;
+  z-index: 2;
+}
+
+.subgrid {
+  display: grid;
+  grid-template-rows: 30% 70%;
+  background-color: white;
+  width: 100%;
+}
+
+.upper {
+  font-weight: 400;
+  font-size: 12px;
+  color: hsl(0, 0%, 59%);
+  position: relative;
+  left: 7%;
+  top: 62%;
+  width: 93%;
+  height: 38%;
+}
+
+.lower {
+  font-weight: 700;
+  position: relative;
+  left: 7%;
+  top: 5%;
+  height: 95%;
+  width: 90%;
+}
+
+#borderL {
+  border-radius: 12px 0 0 12px;
+}
+
+#borderR {
+  border-radius: 0 12px 12px 0;
+}
+
+#isp {
+  overflow: auto;
+}
+
+/*For 4k*/
+@media only screen and (min-width: 2559px) {
+  #gridContainer {
+    width: 60vw;
+    height: 16vh;
+    position: absolute;
+    top: 32vh;
+    left: 20vw;
+  }
+
+  .upper {
+    font-size: 30px;
+    top: 52%;
+    height: 48%;
+  }
+
+  .lower {
+    font-size: 32px;
+    top: 0;
+    height: 100%;
+  }
+
+  #city,
+  #region,
+  #postalCode {
+    font-size: 32px;
+    top: 0;
+    height: 100%;
+  }
+}
+
+@media only screen and (max-width: 1150px) {
+  #gridContainer {
+    width: 90vw;
+    height: 20vh;
+    position: absolute;
+    top: 30vh;
+    left: 5vw;
+  }
+
+  .lower {
+    font-size: 14px;
+    overflow: auto;
+  }
+
+  #city,
+  #region,
+  #postalCode {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 633px) {
+  #gridContainer {
+    width: 98vw;
+    left: 1vw;
+  }
+}
+
+@media only screen and (max-width: 490px) {
+  #gridContainer {
+    grid-template-columns: auto;
+    grid-template-rows: 25% 25% 25% 25%;
+    height: 40vh;
+    top: 20vh;
+    width: 90vw;
+    left: 5vw;
+  }
+
+  #borderL {
+    border-radius: 12px 12px 0 0;
+  }
+
+  #borderR {
+    border-radius: 0 0 12px 12px;
+  }
+
+  .upper {
+      position: static;
+      width: 100%;
+      text-align: center;
+  }
+
+  .lower {
+      position: static;
+      width: 100%;
+      text-align: center;
+  }
 }

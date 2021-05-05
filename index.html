@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>IP Address Tracker</title>
     <link rel="stylesheet" href="index.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
@@ -21,21 +26,38 @@
   <body>
     <div id="mapid"></div>
     <form onsubmit="return false">
-      <label for="ipadress">IP adress</label>
       <input
         type="text"
         id="ipadress"
         name="ipadress"
         placeholder="Search for any IP adress or domain"
       />
-      <button id="submitButton">Go</button>
+      <button id="submitButton">
+        <svg xmlns="http://www.w3.org/2000/svg" width="11" height="14">
+          <path fill="none" stroke="#FFF" stroke-width="3" d="M2 1l6 6-6 6" />
+        </svg>
+      </button>
     </form>
-    <div><p>Ip adress: <span id="yourIp"></span></p></div>
-    <div>
-    <p>Location: <span id="city"></span>, <span id="region"></span> <span id="postalCode"></span></p>
+    <div id="gridContainer">
+      <div class="subgrid" id="borderL">
+        <p class="upper">Ip adress</p>
+        <span id="yourIp" class="lower"></span>
+      </div>
+      <div class="subgrid">
+        <p class="upper">Location</p>
+        <p class="lower"><span id="city"></span> <span id="region"></span><br>
+        <span id="postalCode"></span>
+        </p>
+      </div>
+      <div class="subgrid">
+        <p class="upper">Timezone</p>
+        <span class="lower" id="timeZone"></span>
+      </div>
+      <div class="subgrid" id="borderR">
+        <p class="upper">ISP</p>
+        <span class="lower" id="isp"></span>
+      </div>
     </div>
-    <div><p>Timezone: <span id="timeZone"></span></p></div>
-    <div><p>ISP: <span id='isp'></span></p></div>
     <script src="./map.js"></script>
   </body>
 </html>
